@@ -10,7 +10,7 @@
     ./plug/colorscheme/colorscheme.nix
 
     ./plug/completion/cmp.nix
-    ./plug/completion/copilot-cmp.nix
+    # ./plug/completion/copilot-cmp.nix
     ./plug/completion/lspkind.nix
     ./plug/completion/schemastore.nix
 
@@ -47,7 +47,7 @@
 
     #./plug/utils/harpoon.nix
     ./plug/utils/comment.nix
-    ./plug/utils/copilot.nix
+    # ./plug/utils/copilot.nix
     #./plug/utils/flash.nix
     ./plug/utils/grapple.nix
     ./plug/utils/hardtime.nix
@@ -55,42 +55,19 @@
     ./plug/utils/markview.nix
     ./plug/utils/mini.nix
     ./plug/utils/nvim-autopairs.nix
-    ./plug/utils/obsidian.nix
+    # ./plug/utils/obsidian.nix
     ./plug/utils/oil.nix
     ./plug/utils/ufo.nix
     ./plug/utils/undotree.nix
     ./plug/utils/whichkey.nix
     ./plug/utils/yaml-companion.nix
   ];
-  options = {
-    theme = lib.mkOption {
-      default = lib.mkDefault "paradise";
-      type = lib.types.enum [
-        "paradise"
-        "decay"
-        "edge-dark"
-        "mountain"
-        "tokyonight"
-        "everforest"
-        "everblush"
-        "jellybeans"
-        "aquarium"
-        "gruvbox"
-      ];
-    };
-    assistant = lib.mkOption {
-      default = "none";
-      type = lib.types.enum [
-        "copilot"
-        "none"
-      ];
-    };
-  };
+
   config = {
     # The base16 theme to use, if you want to use another theme, change it in colorscheme.nix
     theme = "paradise";
     extraConfigLua = ''
-      _G.theme = "${config.theme}"
+      _G.theme = "base16-catppuccin-mocha"
     '';
   };
 }
