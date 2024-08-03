@@ -18,6 +18,7 @@
     ./plug/git/gitsigns.nix
     ./plug/git/lazygit.nix
     ./plug/git/worktree.nix
+    ./plug/utils/neocord.nix
 
     ./plug/lsp/conform.nix
     ./plug/lsp/fidget.nix
